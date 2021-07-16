@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scripts": {
       "dev": "NODE_ENV=development nodemon index.js"
-    }
   },
   "repository": {
     "type": "git",
