@@ -1,0 +1,32 @@
+{
+  "name": "code-challenge-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scripts": {
+      "dev": "NODE_ENV=development nodemon index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Gilangsukma.w/code-challenge-sequelize.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Gilangsukma.w/code-challenge-sequelize/issues"
+  },
+  "homepage": "https://gitlab.com/Gilangsukma.w/code-challenge-sequelize#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5",
+    "validator": "^13.6.0"
+  }
+}
