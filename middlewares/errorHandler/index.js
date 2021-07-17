@@ -1,9 +1,3 @@
-// module.exports = (err, req, res, next) => {
-//   res.status(err.statusCode || 500).json({
-//     errors: err.messages || [err.message],
-//   });
-// };
-
 module.exports = (err, req, res, next) => {
   if (err?.original?.errno === 1452) {
     err.messages = [`${err.table} not found`];
