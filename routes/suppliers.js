@@ -13,7 +13,7 @@ const {
   getDetailSupplier,
   deleteSupplier,
   updateSupplier,
-} = require("../controllers/suppliers");
+} = require("../controller/suppliersController");
 
 const router = express.Router();
 
