@@ -12,15 +12,15 @@ app.use(
 );
 
 //routes
-const goodsRouter = require("./routes/good");
-const suppliersRouter = require("./routes/supplier");
-const customersRouter = require("./routes/customers");
+// const goodsRouter = require("./routes/good");
+// const suppliersRouter = require("./routes/supplier");
+const customers = require("./routes/customers");
 
-app.use("/goods", goodsRouter);
-app.use("/suppliers", suppliersRouter);
-app.use("/customers", customersRouter);
+// app.use("/goods", goodsRouter);
+// app.use("/suppliers", suppliersRouter);
+app.use("/customers", customers);
 
 app.use(errorHandler);
 
-const port = 5000;
+const port = 4500;
 app.listen(port, () => console.log(`Server run on port : ${port}`));
