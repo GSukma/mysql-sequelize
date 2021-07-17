@@ -8,9 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.supplier.hasMany(models.good, {
-        foreignKey: "id_good",
-      });
+      // define association here
     }
   }
   supplier.init(
@@ -19,8 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      paranoid: true, // enables deletedAt (soft delete)
-      timestamps: true, // enables createdAt and updatedAt
       modelName: "supplier",
     }
   );
