@@ -3,12 +3,24 @@ const router = require("express").Router();
 //validator
 const {
   getByIdValidator,
+  deleteValidator,
+  addGoodValidator,
+  updateValidator,
 } = require("../middlewares/validators/goodsValidator");
 
 //controller
-const { getById } = require("../controller/goodController");
+const {
+  getAllGoods,
+  getById,
+  deleteGood,
+  addGood,
+  updateGood,
+} = require("../controller/goodController");
 
-router.get("/");
-router.get("/", getByIdValidator, getById);
+router.get("/", getAllGoods);
+router.get("/:id", getByIdValidator, getById);
+router.post("/", addGoodValidator, addGood);
+router.put("/:id", updateValidator, updateGood);
+router.delete("/delete/:id", deleteValidator, deleteGood);
 
 module.exports = router;
