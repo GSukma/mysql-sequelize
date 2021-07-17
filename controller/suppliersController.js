@@ -85,11 +85,6 @@ class Suppliers {
       // Delete data
       let data = await supplier.destroy({ where: { id: req.params.id } });
 
-      // If data deleted is null
-      if (!data) {
-        return next({ statusCode: 404, messages: ["supplier not found"] });
-      }
-
       // If success
       res.status(200).json({ message: "Success delete supplier" });
     } catch (e) {
