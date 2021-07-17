@@ -1,4 +1,5 @@
 const express = require("express");
+const fileUpload = require("express-fileupload");
 
 const errorHandler = require("./middlewares/errorHandler");
 
@@ -11,12 +12,16 @@ app.use(
   })
 );
 
+/* Enables req.body with form-data */
+app.use(fileUpload());
+app.use(express.static("public"));
+
 //routes
 const goodsRouter = require("./routes/goods");
 // const suppliersRouter = require("./routes/supplier");
 // const customersRouter = require("./routes/customers");
 
-app.use("/good", goodsRouter);
+app.use("/goods", goodsRouter);
 // app.use("/suppliers", suppliersRouter);
 // app.use("/customers", customersRouter);
 
