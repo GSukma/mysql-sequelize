@@ -4,6 +4,7 @@ const express = require("express");
 const {
   createSupplierValidator,
   updateSupplierValidator,
+  deleteSupplierValidator,
 } = require("../middlewares/validators/suppliers");
 
 // Import controllers
@@ -28,6 +29,6 @@ router
   .route("/:id")
   .get(getDetailSupplier)
   .put(updateSupplierValidator, updateSupplier)
-  .delete(deleteSupplier);
+  .delete(deleteSupplierValidator, deleteSupplier);
 
 module.exports = router;
