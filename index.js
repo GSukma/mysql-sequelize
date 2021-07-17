@@ -12,13 +12,13 @@ app.use(
 );
 
 //routes
-const goodsRouter = require("./routes/good");
-const suppliersRouter = require("./routes/supplier");
-const customersRouter = require("./routes/customers");
+const goodsRouter = require("./routes/goods");
+// const suppliersRouter = require("./routes/supplier");
+// const customersRouter = require("./routes/customers");
 
-app.use("/goods", goodsRouter);
-app.use("/suppliers", suppliersRouter);
-app.use("/customers", customersRouter);
+app.use("/good", goodsRouter);
+// app.use("/suppliers", suppliersRouter);
+// app.use("/customers", customersRouter);
 
 app.use(errorHandler);
 
