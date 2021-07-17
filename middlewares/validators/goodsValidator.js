@@ -123,11 +123,6 @@ class GoodValidators {
         errorMessages.push("id_supplier must be number (integer");
       }
 
-      // If error
-      if (errorMessages.length > 0) {
-        return next({ statusCode: 400, messages: errorMessages });
-      }
-
       //check good
       const findGood = await good.findOne({
         where: { id: req.params.id },
@@ -137,8 +132,8 @@ class GoodValidators {
         return next({ statusCode: 404, message: "Good not found!" });
       }
 
+      // If image was uploaded
       if (req.files) {
-        // If image was uploaded
         // req.files.image is come from key (file) in postman
         const file = req.files.image;
 
@@ -172,8 +167,12 @@ class GoodValidators {
         // assign req.body.image with file.name
         req.body.image = file.name;
       } else {
-        // no value of req.body.image
-        req.body.image = "";
+        req.body.image = null;
+      }
+
+      // If error
+      if (errorMessages.length > 0) {
+        return next({ statusCode: 400, messages: errorMessages });
       }
 
       next();
