@@ -12,7 +12,7 @@ const {
   getDetailCustomer,
   deleteCustomer,
   updateCustomer,
-} = require("../controllers/customers");
+} = require("../controller/customers");
 
 const router = express.Router();
 
