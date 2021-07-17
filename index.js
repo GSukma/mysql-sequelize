@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 //routes
 const goodsRouter = require("./routes/goods");
-const suppliersRouter = require("./routes/supplier");
+const suppliersRouter = require("./routes/suppliers");
 const customersRouter = require("./routes/customers");
 
 app.use("/goods", goodsRouter);
