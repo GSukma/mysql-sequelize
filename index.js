@@ -26,6 +26,6 @@ app.use("/suppliers", suppliersRouter);
 app.use("/customers", customersRouter);
 
 app.use(errorHandler);
-
-const port = 5000;
-app.listen(port, () => console.log(`Server run on port : ${port}`));
+//port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server run on port : ${port}`));
